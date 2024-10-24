@@ -150,7 +150,7 @@ function PostForm({ post }) {
           {errors.image && <span className="text-red-600">Select an Image.</span>}
           {post && post.featuredImage && (
             <img
-              src={service.getFilePreview(post.featuredImage)}
+                src={service.getFilePreview(post.featuredImage)}
               alt={post.title}
               className="rounded-lg w-full"
             />
