@@ -1,0 +1,24 @@
+<svg 
+    width="200" height="50" 
+    viewBox="0 0 400 100" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Handwritten Style Text -->
+  <text 
+    x="20" y="60" 
+    fill="#000000" 
+    font-size="48" 
+    font-weight="bold" 
+    font-family="'Patrick Hand', cursive">
+    Binary Blogs
+  </text>
+
+  <!-- Wave Pattern Underline -->
+  <path 
+    d="M20 70 Q 80 85, 120 70 T 200 70 T 280 70 T 360 70" 
+    stroke="#000000" 
+    stroke-width="3" 
+    fill="transparent" />
+
+</svg>
