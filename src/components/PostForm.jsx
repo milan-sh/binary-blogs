@@ -61,12 +61,12 @@ function PostForm({ post }) {
         const fileId = file.$id;
         //updating form data featuredImage with the id of file
         data.featuredImage = fileId;
-        console.log("file id isssss", fileId);
+        console.log("user data", userData);
 
         //creating post
         const dbPost = await service.createPost({
           ...data,
-          userId: userData.$id,
+          userId: userData.$id
         });
 
         if (dbPost) {

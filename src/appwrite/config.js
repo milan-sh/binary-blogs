@@ -31,7 +31,7 @@ class Service {
           status,
           userId,
         }
-      );
+      )
     } catch (error) {
       console.log(error);
     }
