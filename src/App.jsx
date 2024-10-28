@@ -31,7 +31,7 @@ function App() {
   //conditional rendering
   return loading ? null : (<div className='min-h-screen flex flex-col content-center box-border items-center justify-between'>
     <Header/>
-    <main className='w-full min-h-[50vh] p-8'>
+    <main className='w-full min-h-[50vh] '>
       <Outlet/>
     </main>
     <Footer/>

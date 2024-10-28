@@ -106,7 +106,7 @@ function PostForm({ post }) {
   }, [watch, setValue, slugTransForm]);
 
   return (
-    <div className="w-full">
+    <div className="w-full md:p-8">
       <form
         className="flex md:flex-row flex-col"
         onSubmit={handleSubmit(onSubmit)}

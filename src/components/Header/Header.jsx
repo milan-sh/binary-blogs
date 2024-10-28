@@ -67,7 +67,7 @@ function Header() {
 
   return (
     <>
-      <nav className="flex items-center justify-between p-4 w-full bg-[#D9D9D9]  md:sticky top-0 h-[10vh] z-10">
+      <nav className="flex items-center justify-between p-4 w-full bg-[#D9D9D9]  md:sticky top-0 md:h-[10vh] h-[8vh] z-10">
         <Link to="/">
           <Logo />
         </Link>

@@ -22,7 +22,7 @@ function AllPosts() {
 
   return (
     <>
-      <div className=" w-full">
+      <div className=" w-full p-4 md:p-10">
         <div className=" w-full flex md:flex-row flex-col justify-start gap-6">
           {posts.map((post) => (
             <div

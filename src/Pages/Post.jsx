@@ -47,7 +47,7 @@ function Post() {
               alt={post.title}
             />
           {isAuthor && (
-            <div className="absolute md:top-20 md:right-8  top-0  flex md:p-3 justify-between gap-3 text-xl">
+            <div className="mt-4 md:mt-0 absolute md:top-20 md:right-8  top-0  flex md:p-3 justify-between gap-3 text-xl">
               <Link to={`/edit-post/${post.$id}`}>
                 <Button className="bg-green-600 rounded-md">Edit</Button>
               </Link>
