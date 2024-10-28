@@ -33,7 +33,7 @@ function Login() {
   };
 
   return (
-    <div className="w-full md:p-8 py-6 flex justify-center box-border">
+    <div className="w-full md:p-8 p-6 flex justify-center box-border">
       <div className="text-black  h-full md:w-1/3 bg-[#E3E3E3] rounded-lg p-6 ">
         <div>
           <h2 className="text-3xl font-bold text-center mb-8">Log in</h2>
