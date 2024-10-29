@@ -63,7 +63,7 @@ function Post() {
           </h1>
         </div>
 
-        <div className="md:text-3xl text-xl mt-5 md:mt-10">
+        <div className="md:text-2xl text-xl mt-5 md:mt-10">
           {parse(post.content)}
         </div>
       </Container>

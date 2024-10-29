@@ -23,7 +23,7 @@ function AllPosts() {
   return (
     <>
       <div className=" w-full p-4 md:p-10">
-        <div className=" w-full flex md:flex-row flex-col justify-start gap-6">
+        <div className=" w-full flex md:flex-row flex-col justify-center gap-6 md:flex-wrap ">
           {posts.map((post) => (
             <div
               key={post.$id}
