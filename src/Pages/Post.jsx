@@ -4,6 +4,7 @@ import service from "../appwrite/config";
 import { Button, Container } from "../components/index";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
+import {formateDate} from "../utils/dateFormatter.js"
 
 function Post() {
   const [post, setPost] = useState(null);
@@ -38,16 +39,22 @@ function Post() {
   };
 
   return post ? (
-    <div className="md:py-8 py-16 w-full h-full relative">
-      <Container>
-        <div className="w-full h-full border-2 border-[#D9D9D9] p-4 rounded-lg mb-2">
+    <div className="py-8 w-full h-full relative">
+      <Container className="md:w-[60%] md:mx-28">
+        <div className="w-full md:mb-12 mb-8">
+          <h1 className="md:text-4xl text-3xl font-semibold mb-1 md:mt-6 mt-2">
+            {post.title}
+          </h1>
+          <p className="text-lg text-gray-500 ">{formateDate(post.$createdAt)}</p>
+        </div>
+        <div className="w-fit h-full mb-2">
         <img
-              className="md:object-contain object-cover w-full  md:w-fit m-auto md:h-[80vh] rounded-lg"
+              className="md:object-contain object-cover w-full md:w-fit m-auto md:h-[40vh] h-[30vh] rounded-lg"
               src={service.getFilePreview(post.featuredImage)}
               alt={post.title}
             />
           {isAuthor && (
-            <div className="mt-4 md:mt-0 absolute md:top-20 md:right-8  top-0  flex md:p-3 justify-between gap-3 text-xl">
+            <div className="mt-4 md:mt-0 absolute md:top-12 md:right-8 top-4 right-4 flex md:p-3 justify-between gap-3 text-xl">
               <Link to={`/edit-post/${post.$id}`}>
                 <Button className="bg-green-600 rounded-md">Edit</Button>
               </Link>
@@ -57,13 +64,7 @@ function Post() {
             </div>
           )}
         </div>
-        <div className="w-full">
-          <h1 className="md:text-8xl text-4xl font-semibold mb-8">
-            {post.title}
-          </h1>
-        </div>
-
-        <div className="md:text-2xl text-xl mt-5 md:mt-10">
+        <div className="md:text-lg text-base mt-12 md:mt-6 md:mb-10 tracking-wide leading-6">
           {parse(post.content)}
         </div>
       </Container>

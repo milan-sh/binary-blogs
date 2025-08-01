@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import service from "../appwrite/config";
-import parse from 'html-react-parser'
+
+import {trimDescription} from "../utils/description.js" 
 
 function PostCard({ $id, title, featuredImage, content }) {
   return (
@@ -16,13 +17,9 @@ function PostCard({ $id, title, featuredImage, content }) {
           alt={title}
         />
 
-        <div className="min-h-[15vh] flex flex-col items-start justify-start p-3">
-          <h1 className="font-semibold text-2xl mb-2">{title?.toUpperCase()}</h1>
-          <div className="flex items-center gap-8">
-            {/* <p className="text-[#0029FF] font-semibold">Author: {} </p>
-            <p className="text-gray-600 ">0 min ago</p> */}
-          </div>
-          <div className="font-semibold flex text-gray-700">{parse(`${content.substring(0, 80)}...`)}</div>
+        <div className="md:min-h-[15vh] flex flex-col items-start justify-start p-3">
+          <h1 className="font-semibold md:text-2xl text-lg md:mb-2">{title?.toUpperCase()}</h1>
+          <div className="md:font-semibold flex text-gray-700">{trimDescription(content)}</div>
         </div>
       </div>
     </Link>

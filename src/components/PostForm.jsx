@@ -61,7 +61,6 @@ function PostForm({ post }) {
         const fileId = file.$id;
         //updating form data featuredImage with the id of file
         data.featuredImage = fileId;
-        console.log("user data", userData);
 
         //creating post
         const dbPost = await service.createPost({
@@ -125,7 +124,6 @@ function PostForm({ post }) {
             placeholder="Slug"
             {...register("slug", { required: true })}
             onChange={(e) => {
-              console.log(e.currentTarget.value)
               setValue("slug", slugTransForm(e.currentTarget.value), {
                 shouldValidate: true
               });
