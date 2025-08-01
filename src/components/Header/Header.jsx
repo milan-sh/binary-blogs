@@ -108,7 +108,7 @@ function Header() {
                 </li>
               ) : null
             ))}
-            {authStatus && <li className="list-none text-center"><LogoutBtn className="bg-gray-600 px-10 rounded-full text-2xl py-2"/></li>}
+            {authStatus && <li className="list-none text-center"><LogoutBtn className="px-10 rounded-full text-2xl py-2"/></li>}
           </ul>
 
           

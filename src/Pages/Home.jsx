@@ -19,6 +19,7 @@ function Home() {
     service.getPosts().then((posts) => {
       if (posts) {
         setPosts(posts.documents);
+        console.log(posts.documents);
       }
     });
 
@@ -46,10 +47,10 @@ function Home() {
   return (
     <div className="py-8 w-full test flex justify-start">
       <Container>
-        <div className="flex w-full flex-wrap justify-start gap-5">
+        <div className="grid md:grid-cols-3 gap-5">
           {posts.map((post) => {
             return (
-              <div key={post.$id} className="md:w-[30%] w-full  h-full">
+              <div key={post.$id} className="w-full h-full">
                 <PostCard {...post} />
               </div>
             );

@@ -13,7 +13,7 @@ function LogoutBtn({className=""}) {
     }
   return (
     <div>
-      <button className={`bg-gray-800 text-white py-1 px-6 rounded-full hover:bg-inherit hover:text-black hover:border hover:border-[#383838] ${className}`} onClick={logoutHandler}>Logout</button>
+      <button className={`bg-red-500 text-white py-1 px-6 rounded-full hover:bg-inherit hover:text-red-600 hover:border-2 hover:border-red-500 ${className}`} onClick={logoutHandler}>Logout</button>
     </div>
   )
 }
